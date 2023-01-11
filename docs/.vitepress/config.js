@@ -1,11 +1,11 @@
 export default {
     title: 'pen-doc',
-    base:'/',
+    base:'/pen-doc',
     description: 'pen document project.',
     head: [
         [
           'link',
-          { rel: 'icon', href: '/icon.png', type: 'image/png' }
+          { rel: 'icon', href:  this.base + '/icon.png', type: 'image/png' }
         ]
       ],
     themeConfig: {
