@@ -25,6 +25,12 @@ jobs:
       - name: 查看路径
         run: pwd
 
+      - name: 查看路径
+        run: ls -al docs/.vitepress
+      
+      - name: 查看路径2
+        run: ls -al docs/.vitepress/dist
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
