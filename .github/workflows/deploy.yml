@@ -22,7 +22,7 @@ jobs:
       - name: 查看当前目录内容
         run: ls -al
 
-      - name: 查看路径
+      - name: 查看路径2
         run: pwd
 
 
