@@ -2,7 +2,7 @@ name: Build
 on:
   push:
     branches:
-      - hunsha
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
