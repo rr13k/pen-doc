@@ -1,0 +1,35 @@
+name: Build
+on:
+  push:
+    branches:
+      - hunsha
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup Node.js-v16.14.2
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.14.2'
+      - name: Install dependencies 并编译
+        run: npm install &&  npm run build
+
+      - name: 查看当前目录内容
+        run: ls -al
+
+      - name: 查看路径
+        run: pwd
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: master  # 您的 GitHub Pages 分支名称
+          repository-name: rr13k/rr13k.github.io
+          token: ${{ secrets.RR13K_PAT }}
+          folder: docs/.vitepress/dist  # 您的构建文件夹路径
+          target-folder: pen-doc

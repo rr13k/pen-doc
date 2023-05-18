@@ -26,8 +26,9 @@ export default {
                 text: '基础',
                 items: [
                     { text: '路由', link: '/temps/router' },
-                    { text: '中间件', link: '/getting-started' },
-                    { text: 'session', link: '/getting-started' },
+                    { text: '中间件', link: '/temps/plug' },
+                    { text: 'session', link: '/temps/session' },
+                    { text: 'Gen Model', link: '/temps/gen-model' },
                     { text: '配置文件', link: '/temps/options' },
                 ]
             }
