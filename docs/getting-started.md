@@ -18,7 +18,7 @@
 
 这个命令会协助你安装`pen`框架的基础代码，在正式使用前，我们还需要进行编译安装
 ```sh
-> go install github.com/rr13k/pen
+> go install github.com/rr13k/pen@latest
 ```
 
 安装完之后，`pen` 可执行文件默认存放在 `$GOPATH/bin` 里面，所以你需要把 `$GOPATH/bin` 添加到你的环境变量中，才可以进行下一步。
